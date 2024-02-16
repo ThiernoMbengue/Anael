@@ -34,11 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
             var imageContainerTop = imageContainer.offsetTop;
 
             if (currentScroll >= textContainerTop && currentScroll < imageContainerTop) {
-                textContainer.style.display = 'block';
-                imageContainer.style.display = 'none';
+                imageContainer.classList.remove('show'); // Masquer la colonne d'image
             } else {
-                textContainer.style.display = 'none';
-                imageContainer.style.display = 'block';
+                imageContainer.classList.add('show'); // Afficher la colonne d'image
             }
         });
     }
