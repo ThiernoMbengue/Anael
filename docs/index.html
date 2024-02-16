@@ -1,43 +1,147 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-    <title>Votre titre</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ajout de la balise viewport -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Scrollama: Sticky Images (Based on Sticky Side Example)</title>
+    <meta name="description" content="Scrollama: Sticky Side Example" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<h1>L'aquaculture des animaux ou cultiver des plantes en milieu aquatique. Pour l'essentiel, ces productions visent la consommation humaine.</h1>
+  <body>
+    <main>
+      <section id="intro">
+        <video
+          id="background-video"
+          autoplay
+          loop
+          muted
+          poster="https://cdn.glitch.global/63423c5f-5098-4a28-8b25-50cda668df62/okavango.png?v=1659356636360"
+        >
+          <source
+            src="./images/fond.mp4"
+            type="video/mp4"
+          />
+        </video>
 
-<div class="content">
-    <div class="text-container">
-        <div class="step" data-index="0">L'aquaculture est une méthode de production alimentaire qui implique la culture de plantes et d'animaux dans un environnement aquatique. Elle est utilisée pour produire une variété de produits, y compris des poissons, des crustacés, des mollusques, des algues et même des plantes aquatiques. L'aquaculture peut être pratiquée en eau douce, en eau salée et en eau saumâtre, et elle peut être réalisée dans des environnements naturels ou artificiels.</div>
-        <div class="step" data-index="1">L'aquaculture est une industrie en croissance rapide. Selon l'Organisation des Nations Unies pour l'alimentation et l'agriculture, elle représente désormais près de la moitié de la production mondiale de poissons. Cela est dû en partie à la surpêche et à la diminution des stocks de poissons sauvages, mais aussi à la demande croissante de produits de la mer.</div>
-        <div class="step" data-index="2">Cependant, l'aquaculture présente également des défis. Les préoccupations environnementales comprennent la pollution de l'eau, l'utilisation de produits chimiques et d'antibiotiques, l'évasion des espèces d'élevage dans la nature et l'impact sur les habitats naturels. De plus, il y a des préoccupations sociales et économiques, notamment en ce qui concerne les droits de l'homme et les conditions de travail dans certaines parties de l'industrie.</div>
-    </div>
-    <div class="image-container">
-        <img src="" alt="Image correspondante">
-    </div>
-</div>
+        <h1 class="intro__hed">#Test scrollama</h1>
+        <p class="intro__dek">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </section>
 
-<div class="conclusion">
-    <h2>Conclusion</h2>
-    <p>En conclusion, l'aquaculture a le potentiel de contribuer de manière significative à la sécurité alimentaire mondiale et à la conservation des ressources marines. Cependant, pour réaliser ce potentiel, il est essentiel que l'industrie soit gérée de manière durable et responsable. Cela nécessite une réglementation efficace, des pratiques de gestion responsables et une recherche continue pour améliorer les méthodes d'élevage et minimiser les impacts environnementaux.</p>
-</div>
+      <section id="scrolly">
+        <article>
+          <!--  step/text container  -->
+          <div class="scroll__text">
+            <div
+              class="step"
+              data-step="1"
+              data-value="./images/carte.svg"
+              data-text="#Image 1"
+              data-attribute="src"
+              data-target="imgObj"
+            >
+              <p>
+                Cursus vitae congue mauris rhoncus aenean vel. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Massa tempor nec feugiat nisl pretium fusce.
+              </p>
+            </div>
+            <div
+              class="step"
+              data-step="2"
+              data-value="./images/chart.svg"
+              data-text="#Chart"
+              data-attribute="src"
+              data-target="imgObj"
+            >
+              <p>
+                Quis blandit turpis cursus in hac habitasse. Molestie at elementum eu facilisis sed.
+              </p>
+            </div>
+            <div
+              class="step"
+              data-step="3"
+              data-value="./images/pieHuile.svg"
+              data-text="#pie"
+              data-attribute="src"
+              data-target="imgObj"
+            >
+              <p>Euismod elementum nisi quis eleifend quam adipiscing vitae. Nulla posuere sollicitudin aliquam ultrices sagittis orci a. </p>
+            </div>
+            <div
+              class="step"
+              data-step="4"
+              data-value="./images/girl.svg"
+              data-text="#girl"
+              data-attribute="src"
+              data-target="imgObj"
+            >
+              <p>
+                Morbi tristique senectus et netus et malesuada. Maecenas ultricies mi eget mauris pharetra et. Sed vulputate mi sit amet mauris commodo quis.
+              </p>
+            </div>
+            <div
+              class="step"
+              data-step="5"
+              data-value="./images/moon.svg"
+              data-text="#Moon"
+              data-attribute="src"
+              data-target="imgObj"
+            >
+              <p>
+                Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Neque vitae tempus quam pellentesque nec nam.
+              </p>
+            </div>
+            <div
+              class="step"
+              data-step="6"
+              data-value="./images/mouse.svg"
+              data-text="#Mouse"
+              data-attribute="src"
+              data-target="imgObj"
+            >
+              <p>
+                Mauris cursus mattis molestie a iaculis at erat pellentesque. Maecenas pharetra convallis posuere morbi leo urna molestie.
+              </p>
+            </div>
+            <div
+              class="step"
+              data-step="7"
+              data-value="./images/child.svg"
+              data-text="Child"
+              data-attribute="src"
+              data-target="imgObj"
+            >
+              <p>
+                Augue neque gravida in fermentum et sollicitudin ac. Nunc sed id semper risus in hendrerit gravida rutrum.
+              </p>
+            </div>
+          </div>
+        </article>
 
-<div class="additional-content">
-    <div class="text-container">
-        <div class="step" data-index="3">Malgré ces défis, l'aquaculture a un énorme potentiel. Avec une gestion appropriée, elle peut fournir une source de nourriture précieuse et contribuer à la conservation des espèces marines. De plus, elle peut offrir des opportunités économiques, en particulier dans les zones rurales et côtières où les options d'emploi peuvent être limitées.</div>
-        <div class="step" data-index="4">En fin de compte, l'aquaculture est une partie importante de la solution à la sécurité alimentaire mondiale. Cependant, comme pour toute industrie, il est important qu'elle soit gérée de manière responsable et durable. Avec la bonne réglementation et la bonne gestion, l'aquaculture peut être une force positive pour l'environnement et les communautés du monde entier.</div>
-    </div>
-    <div class="image-container">
-        <img src="" alt="Image correspondante">
-    </div>
-</div>
+        <!--  graphic container  -->
+        <figure>
+          <div class="frame">
+            <!--   actual graphic/chart   -->
+            <img
+              src="./images/carte.svg"
+              width="100%"
+              id="imgObj"
+            />
+            <figcaption id="captionObj">CaptionObj</figcaption>
+          </div>
+        </figure>
+      </section>
 
-<script src="https://unpkg.com/scrollama"></script>
-<script src="js/script.js"></script>
+      <section id="outro"></section>
+    </main>
 
-</body>
+    <!-- <div class='debug'></div> -->
+    <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="./js/scrollama.min.js"></script>
+    <script src="./js/script.js"></script>
+
+  </body>
 </html>
