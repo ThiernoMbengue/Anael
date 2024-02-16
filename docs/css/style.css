@@ -26,7 +26,7 @@ h1 {
     align-items: flex-start;
     padding-top: 80px;
     flex-grow: 1;
-    flex-wrap: wrap; /* Pour permettre un meilleur responsive design */
+    flex-wrap: wrap; 
 }
 
 .text-container, .image-container {
