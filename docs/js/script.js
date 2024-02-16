@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     var scroller = scrollama();
-    var title = document.querySelector('h1');
-    var titleHeight = title.offsetHeight;
-    var lastScrollTop = 0;
-
     var images = [
         "./images/carte.svg",
         "https://via.placeholder.com/600x400/00FFFF/808080?text=2",
@@ -15,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleStepEnter(response) {
         var stepElement = response.element;
-        var container = stepElement.closest('.content, .additional-content');
+        var container = stepElement.closest('.content');
         var img = container.querySelector('.image-container img');
         if (img) {
             img.src = images[response.index];
@@ -31,17 +27,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         window.addEventListener('scroll', function() {
             var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            if (currentScroll > lastScrollTop && currentScroll > titleHeight) {
-                // Faites défiler vers le bas
-                title.classList.add('title-hide');
+            var content = document.querySelector('.content');
+            var textContainer = content.querySelector('.text-container');
+            var imageContainer = content.querySelector('.image-container');
+            var textContainerTop = textContainer.offsetTop;
+            var imageContainerTop = imageContainer.offsetTop;
+
+            if (currentScroll >= textContainerTop && currentScroll < imageContainerTop) {
+                textContainer.style.display = 'block';
+                imageContainer.style.display = 'none';
             } else {
-                // Faites défiler vers le haut
-                title.classList.remove('title-hide');
+                textContainer.style.display = 'none';
+                imageContainer.style.display = 'block';
             }
-            lastScrollTop = currentScroll;
         });
     }
 
     init();
 });
-
