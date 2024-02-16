@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     var scroller = scrollama();
+    var title = document.querySelector('h1');
+    var titleHeight = title.offsetHeight;
+    var lastScrollTop = 0;
+
     var images = [
         "./images/carte.svg",
         "https://via.placeholder.com/600x400/00FFFF/808080?text=2",
@@ -10,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     function handleStepEnter(response) {
-        // Trouver l'image dans le même conteneur 'content' ou 'additional-content' que le step activé
         var stepElement = response.element;
         var container = stepElement.closest('.content, .additional-content');
         var img = container.querySelector('.image-container img');
@@ -25,7 +28,20 @@ document.addEventListener('DOMContentLoaded', function () {
             offset: 0.5,
             debug: false
         }).onStepEnter(handleStepEnter);
+
+        window.addEventListener('scroll', function() {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop && currentScroll > titleHeight) {
+                // Faites défiler vers le bas
+                title.classList.add('title-hide');
+            } else {
+                // Faites défiler vers le haut
+                title.classList.remove('title-hide');
+            }
+            lastScrollTop = currentScroll;
+        });
     }
 
     init();
 });
+
